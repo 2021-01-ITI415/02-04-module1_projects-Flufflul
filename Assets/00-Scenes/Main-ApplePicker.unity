@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &714367466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 294081399275748337, guid: cdb41ff7fb9465e428010f06afdc969b, type: 3}
+  m_PrefabInstance: {fileID: 294081398564002331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &714367467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714367466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfb87698bbcac6478b13a818e03618d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applePrefab: {fileID: 0}
+  speed: 10
+  leftAndRightEdge: 20
+  chanceToChangeDirections: 0.005
+  secondsBetweenAppleDrops: 1
 --- !u!1 &792234105
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,8 +197,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -319,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 294081399275748343, guid: cdb41ff7fb9465e428010f06afdc969b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 294081399275748343, guid: cdb41ff7fb9465e428010f06afdc969b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -353,5 +375,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5317290270323674803, guid: cdb41ff7fb9465e428010f06afdc969b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cdb41ff7fb9465e428010f06afdc969b, type: 3}
