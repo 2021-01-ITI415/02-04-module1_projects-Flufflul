@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         jump = new Vector3(0f, 1f, 0f);
     }
     
-    private void UpdateGUI() {
+    void UpdateGUI() {
         coins.text = count + " Coins";
     }
 
@@ -67,17 +67,33 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y;
     }
 
-    private void Update() {
+    private void ShouldIJump() {
         if (isGrounded && Keyboard.current.spaceKey.IsPressed()) {
             rb.AddForce(jump * jumpStrength, ForceMode.Impulse);
             isGrounded = false;
         }
+    }
 
+    private void Update() {
+        ShouldIJump();
+        ShouldIRespawn();
+    }
+
+    private void ShouldIRespawn() {
         if (gameObject.transform.position.y < deathHeight) {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            gameObject.transform.position = spawn;
+            Respawn();
         }
+
+        if (Prototype.isNewWorld) {
+            Respawn();
+            UpdateGUI();
+        }
+    }
+
+    private void Respawn() {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        gameObject.transform.position = spawn;
     }
 
     void FixedUpdate() {
