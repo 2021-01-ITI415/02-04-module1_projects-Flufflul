@@ -471,6 +471,7 @@ MonoBehaviour:
   worlds:
   - {fileID: 8853560708299185778, guid: 93099e2405f9b6f45845b53c200eb9d7, type: 3}
   - {fileID: 8853560708299185778, guid: 703345a73a88b334e94f729c666bff6e, type: 3}
+  - {fileID: 8853560708299185778, guid: 9f816f88259e7de43800cc371b778a54, type: 3}
 --- !u!1 &1238258451
 GameObject:
   m_ObjectHideFlags: 0
