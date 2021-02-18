@@ -10,10 +10,14 @@ public class Prototype : MonoBehaviour
     private int levelCurrent;
     private int levelLast;
 
+    private int totalCoins;
+    private GameObject[] coins;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        coins = GameObject.FindGameObjectsWithTag("Coin");
+        totalCoins = coins.Length;
     }
 
     // Update is called once per frame
