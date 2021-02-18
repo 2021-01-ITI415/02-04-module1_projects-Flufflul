@@ -69,6 +69,7 @@ public class Prototype : MonoBehaviour
         levelCurrent++;
         if (levelCurrent >= levelLast) {
             levelCurrent = 0;
+            SceneManager.LoadScene("SceneMain");
         }
 
         InitializeWorld();
