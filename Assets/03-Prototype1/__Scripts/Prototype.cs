@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Prototype : MonoBehaviour
 {
+    [Header("Inspector: UI Elements")]
+    public TextMeshProUGUI UI_textLevel;
+    private int levelCurrent;
+    private int levelLast;
+
     // Start is called before the first frame update
     void Start()
     {
