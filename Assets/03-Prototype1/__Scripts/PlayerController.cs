@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Inspector: UI Elements")]
     public TextMeshProUGUI coins;
-    private int count;
+    private static int count;
 
     [Header("Inspector: Movement")]
     public float speed = 1;
@@ -38,7 +38,11 @@ public class PlayerController : MonoBehaviour
     private void UpdateGUI() {
         coins.text = count + " Coins";
     }
-    
+
+    public static void ResetCoins() {
+        count = 0;
+    }
+
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.tag == "Ground") { isGrounded = true; }
     }
